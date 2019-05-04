@@ -1,0 +1,10 @@
+@article {EstrGrei:2015,
+    AUTHOR  = {Estrin, Ron and Greif, Chen},
+    TITLE   = {On Nonsingular Saddle-Point Systems With a Maximally
+			Rank Deficient Leading Block},
+    JOURNAL = {SIAM Journal on Matrix Analysis and Applications},
+    VOLUME  = 36,
+    NUMBER  = 2,
+    PAGES   = "367--384",
+    YEAR    = {2015}
+}

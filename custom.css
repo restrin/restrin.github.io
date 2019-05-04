@@ -1,0 +1,17 @@
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+li {
+  margin: 3px 0;
+}
+
+termspan {
+  display: inline-block;
+  width: 50px;
+}

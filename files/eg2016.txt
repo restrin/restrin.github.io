@@ -1,0 +1,10 @@
+@article{EstrGrei:2016,
+  author    = {Estrin, Ron and Greif, Chen},
+  title     = {Towards an optimal condition number of certain augmented Lagrangian-type
+               saddle-point matrices},
+  journal   = {Numerical Linear Algebra with Applications},
+  volume    = {23},
+  number    = {4},
+  pages     = {693--705},
+  year      = {2016},
+}

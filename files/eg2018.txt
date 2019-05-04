@@ -1,0 +1,16 @@
+@article {EstrGrei:2018,
+    AUTHOR = {Estrin, Ron and Greif, Chen},
+     TITLE = {S{PMR}: {A} {F}amily of {S}addle-{P}oint {M}inimum {R}esidual
+              {S}olvers},
+   JOURNAL = {SIAM J. Sci. Comput.},
+  FJOURNAL = {SIAM Journal on Scientific Computing},
+    VOLUME = {40},
+      YEAR = {2018},
+    NUMBER = {3},
+     PAGES = {A1884--A1914},
+      ISSN = {1064-8275},
+   MRCLASS = {65F10 (15A06 15A18 65F08 65F50)},
+  MRNUMBER = {3817769},
+       DOI = {10.1137/16M1102410},
+       URL = {https://doi-org.ezproxy.library.ubc.ca/10.1137/16M1102410},
+}

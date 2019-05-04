@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Ron Estrin</title>
+  
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="custom.css" rel="stylesheet">
+  
+  <!-- MathJax --> 
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+</head>
+
+<body>
+	<a name="top"></a>
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" >
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">Ron Estrin</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./research.html">Research</a></li>
+          <li><a href="./publications.html">Publications</a></li>
+          <li><a href="./teaching.html">Teaching</a></li>
+          <li><a href="./files/cv.pdf">CV</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+
+  <div name="overview" id="overview">
+    <p>My research is focused on developing and analyzing fast algorithms for large-scale computational problems arising in scientific computing, machine learning, and other fields. Below is a brief description of (some) projects that I have worked on during my PhD and during internships. </p>
+  </div>
+
+  <!-- PROJECTS -->
+  <div name="projects" id="projects">
+    <h3>Projects</h3>
+    <ul>
+      <li><b>Smooth Exact Penalty Functions for Nonlinear Programming</b>
+        <ul>
+          <li>We develop and implement smooth exact penalty functions for nonlinear programs:
+            \begin{align*}
+            \text{minimize}_x \qquad & f(x)
+            \\  \text{subject to} \qquad & c(x) = 0
+            \\  & \ell \le x \le u
+            \end{align*}
+            based on a smooth penalty function originally introduced by Fletcher in 1970.
+          </li>
+          <li>The Matlab solver is <a href="https://github.com/optimizers/FletcherPenalty">here</a>, and a prototype is implemented within the <a href="https://github.com/trilinos/Trilinos/tree/master/packages/rol">ROL</a>  package in Sandia's Trilinos Library.</li>
+        </ul>
+      </li>
+      <li><b>BCFLASH: A Newton-CG Trust-Region Solver for Bound-Constrained Problems</b>
+        <ul>
+          <li>A Matlab solver based on <a href="https://www.mcs.anl.gov/~more/tron/">TRON</a> for solving:
+            \begin{align*}
+            \text{minimize}_x \qquad & f(x)
+            \\  \text{subject to} \qquad & \ell \le x \le u
+            \end{align*}
+          </li>
+          <li> Solver can be found <a href="https://github.com/optimizers/bcflash">here</a>.
+        </ul>
+      <li><b>Iterative Solvers for Linear Systems, Least-Squares and Least-Norm Problems</b>
+        <ul> 
+          <li>LSLQ and LNLQ are Krylov solvers for least-squares and least-norm problems that allow for upper-bounding the solution error at each iteration, provided spectral information on the linear system.</li>
+          <li>SPMR is a family of iterative solvers for non-symmetric saddle-point systems, aimed to exploit the saddle-point structure of the underlying linear system.</li>
+          <li>These solvers are implemented within my Github repository <a href="https://github.com/restrin/LinearSystemSolvers">LinearSystemSolvers</a>, and within the <a href="https://github.com/JuliaSmoothOptimizers/Krylov.jl">Krylov.jl</a> package.</li>
+        </ul>
+      </li>
+      <li><b>PDCO: A Primal-Dual Interior Point Solver</b>
+        <ul>
+          <li>PDCO is a primal-dual interior point solver for problems of the form:
+            \begin{align*}
+            \text{minimize}_{x,r} \qquad   & \phi(x)  +  \frac12 \|D_1x\|^2  +  \frac12 \|r\|^2
+            \\ \text{subject to } \qquad & Ax + D_2r = b
+            \\                    & \ell \le x \le u,
+            \end{align*}
+            where \( \phi(x) \) is a convex function. Details on the original MATLAB solver is found <a href="http://web.stanford.edu/group/SOL/software/pdco/">here</a>.</li>
+          <li>The solver is implemented in C++ in order to support higher precision datatypes, such as DoubleDouble, QuadDouble, Quad and BigFloat.</li>
+          <li>This solver is applied to multiscale linear programs arising from Metabolic Expression models.</li>
+          <li>PDCO is being implemented within my fork of <a href="http://libelemental.org/">Elemental</a>, found <a href="https://github.com/restrin/Elemental/tree/pdco">here</a>.</li>
+        </ul>
+      </li>
+      <li><b>Lattice Problems</b>
+        <ul>
+          <li>Several algorithms (LLL, BKZ) for lattice problems (e.g. SVP, CVP) implemented into <a href="http://libelemental.org/">Elemental</a>.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+    
+  <!-- INTERNSHIPS -->
+  <div name="internships" id="internships">
+    <h3>Internships</h3>
+    <ul>
+      <li>
+        <b> Google Research (Summer 2017) </b>
+        <ul>
+          <li> Researched new approaches to low-rank matrix completion with applications to recommendation systems (e.g. movie or music recommendations given partial ratings) and to compute word embeddings. </li>
+          <li> Implemented high-performance solver for various low-rank matrix completion schemes using weighted alternating least-squares in python using Numpy and Scipy.  </li>
+          <li> Demonstrated cases where proposed low-rank completion structure outperforms traditional low-rank matrix-completion approaches for computing word embeddings. </li>
+        </ul>
+      </li>
+      <li>
+        <b>Microsoft (Summer 2015)</b>
+        <ul>
+          <li> Implemented features for distributed database transations in the cloud for SQL Azure as part of the Elastic Scale team. </li>
+          <li> Algorithms implemented from novel work conducted at Microsoft Research. </li>
+          <li> Feature was implemented in C++ within the SQL Server Engine, along with a design document and a test suite in C#. </li>
+          <li> More details to follow when feature is in public preview. </li>
+        </ul>
+      </li>
+      <li>
+        <b>Microsoft (Summer 2014)</b>
+        <ul>
+          <li>Worked on designing a time synchronization scheme for virtual machines throughout Azure datacenters across the world. The current state of synchronizations let machines drift up to seconds and minutes apart, making logging and causality analysis across nodes difficult.</li>
+          <li>Implemented prototype which achieved synchronization to within 4 milliseconds for nodes in the same datacenter. Across datacenters, sub-second synchronization was achieved.</li>
+        </ul>
+     </li>
+     <li>
+        <b>Google (Summer 2013)</b>
+        <ul>
+          <li>Was a software engineering intern for Gmail, working to improve the network efficiency of the request/response system between the front- and back-end of the mobile application.</li>
+          <li>Resulting project reduced the round-trip time of the first request/response pair by 75%.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  </div><!-- /.container -->
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+</body>
+</html>
