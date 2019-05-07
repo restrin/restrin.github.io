@@ -1,0 +1,16 @@
+@article {EstrOrbaSaun:2019b,
+    AUTHOR = {Estrin, Ron and Orban, Dominique and Saunders, Michael A.},
+     TITLE = {L{SLQ}: an iterative method for linear least-squares with an
+              error minimization property},
+   JOURNAL = {SIAM J. Matrix Anal. Appl.},
+  FJOURNAL = {SIAM Journal on Matrix Analysis and Applications},
+    VOLUME = {40},
+      YEAR = {2019},
+    NUMBER = {1},
+     PAGES = {254--275},
+      ISSN = {0895-4798},
+   MRCLASS = {65F10 (15A06 65F20 65F22 65F25 65F35 65F50 93E24)},
+  MRNUMBER = {3911719},
+       DOI = {10.1137/17M1113552},
+       URL = {https://doi.org/10.1137/17M1113552},
+}
